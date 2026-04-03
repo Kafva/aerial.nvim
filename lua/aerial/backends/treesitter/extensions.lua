@@ -138,6 +138,12 @@ M.markdown = {
   end,
 }
 
+M.typst = {
+  get_parent = function(stack, match, node)
+    return nil, nil, match.level or 0
+  end,
+}
+
 M.go = {
   ---@note Additionally processes the following captures:
   ---      `@receiver` - extends the name to "@receiver @name"
